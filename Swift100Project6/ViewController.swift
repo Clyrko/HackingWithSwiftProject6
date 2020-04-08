@@ -51,11 +51,13 @@ class ViewController: UIViewController {
         
         let viewsDictionary = ["label1": label1, "label2": label2, "label3": label3, "label4": label4, "label5": label5]
         
+        let metrics = ["labelHeight": 88]
+        
         for label in viewsDictionary.keys {
             
             view.addConstraints( NSLayoutConstraint.constraints(withVisualFormat: "H:|[\(label)]|", options: [], metrics: nil, views: viewsDictionary))
             
-            view.addConstraints( NSLayoutConstraint.constraints(withVisualFormat: "V:|[label1(==72)]-[label2(==72)]-[label3(==72)]-[label4(==72)]-[label5(==72)]-(>=10)-|", options: [], metrics: nil, views: viewsDictionary))
+            view.addConstraints( NSLayoutConstraint.constraints(withVisualFormat: "V:|[label1(labelHeight@999)]-[label2(label1)]-[label3(label1)]-[label4(label1)]-[label5(label1)]->=10-|", options: [], metrics: metrics, views: viewsDictionary))
             
         }
     }
