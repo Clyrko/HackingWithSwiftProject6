@@ -55,7 +55,7 @@ class ViewController: UIViewController {
             
             view.addConstraints( NSLayoutConstraint.constraints(withVisualFormat: "H:|[\(label)]|", options: [], metrics: nil, views: viewsDictionary))
             
-            view.addConstraints( NSLayoutConstraint.constraints(withVisualFormat: "V:|[label1]-[label2]-[label3]-[label4]-[label5]", options: [], metrics: nil, views: viewsDictionary))
+            view.addConstraints( NSLayoutConstraint.constraints(withVisualFormat: "V:|[label1(==72)]-[label2(==72)]-[label3(==72)]-[label4(==72)]-[label5(==72)]-(>=10)-|", options: [], metrics: nil, views: viewsDictionary))
             
         }
     }
